@@ -14,9 +14,9 @@ import com.amazonaws.services.s3.model.S3Object;
 import com.amazonaws.services.s3.model.S3ObjectInputStream;
 
 public class upload {
-	private static String bucketName     = "uploadbycode";
-	private static String keyName     = "thisfile";
-	private static String uploadFileName    = "C:\\Users\\Rohan\\Documents\\test.txt";
+	private static String bucketName     = "uploadbycode";	//bucket name in your S3
+	private static String keyName     = "thisfile";		//file name with which you want to upload
+	private static String uploadFileName    = "C:\\Users\\Rohan\\Documents\\test.txt";	//address to the file which you want to upload
 	
 	void uploadfile(AWSCredentials credentials)
 	{
@@ -48,7 +48,7 @@ public class upload {
         }
 	}
 	public static void main(String[] args) throws IOException {
-		AWSCredentials Credentials = new BasicAWSCredentials(
+		AWSCredentials Credentials = new BasicAWSCredentials(		
 				"AKIAJNCZLJHMV7CMQ3SA", 
 				"uejvpse68EC7q9Jlct3UnfgJefvjr+nzRSJJhZKa");
 		upload s3client = new upload();
